@@ -11,10 +11,10 @@ export const Main: React.FC = () => {
 
   return (
     <Container className="p-3">
-    <Row>
-    <PaginationComponent/>
-    { posts?.slice(0, 8).map((post: iPost) => <Post post={post} key={post.id}/>) }
-    </Row>
+      <Row>
+        <PaginationComponent />
+        {posts?.slice(0, 8).map((post: iPost) => <Post post={post} key={post.id} />)}
+      </Row>
     </Container>
   )
 }
