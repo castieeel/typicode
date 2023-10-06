@@ -4,7 +4,9 @@ import { Burger } from '../../components/Burger'
 
 export const MainPage: React.FC = () => {
   return (
-        <><Burger />
-        <Main /></>
+        <>
+        <Burger />
+        <Main />
+        </>
   )
 }
