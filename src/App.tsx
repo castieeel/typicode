@@ -1,7 +1,7 @@
 import React from 'react'
-import { AppRoutes } from '../routes'
+import { AppRoutes } from './routes'
 
-export const App: React.FC = () =>{
+export const App: React.FC = () => {
   return (
         <div>
         <AppRoutes/>

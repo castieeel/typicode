@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { AboutMePage } from './src/pages/aboutMe'
-import { MainPage } from './src/pages/main'
-import { UserPage } from './src/pages/user'
-import { NotFound } from './src/pages/notFound'
+import { AboutMePage } from './pages/aboutMe'
+import { MainPage } from './pages/main'
+import { UserPage } from './pages/user'
+import { NotFound } from './pages/notFound'
 
 export const AppRoutes: React.FC = () => {
   return (
