@@ -11,15 +11,11 @@ export const Burger: React.FC = () => {
       <h2>Виктория</h2>
       <p>kiseleva_va@hotmail.com</p>
       <Link className="menu-item" to='/'>
-      <a>
         Список постов
-      </a>
       </Link>
 
       <Link className="menu-item" to='aboutMe'>
-      <a>
         Обо мне
-      </a>
       </Link>
 
     </Menu>
