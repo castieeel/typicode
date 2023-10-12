@@ -17,8 +17,13 @@ export const typicodeApi = createApi({
       query: (idPost: number) => ({
         url: `/posts/${idPost}/comments`
       })
+    }),
+    getUser: builder.query <iPost[], number >({
+      query: (idUser: number) => ({
+        url: `/posts?userId=${idUser}`
+      })
     })
   })
 })
 
-export const { useGetPostsQuery, useLazyGetCommentsQuery } = typicodeApi
+export const { useGetPostsQuery, useLazyGetCommentsQuery, useGetUserQuery } = typicodeApi

@@ -1,0 +1,73 @@
+{
+	"id": "b8625d86-22a0-4465-a4a2-5bad493260c8",
+	"name": "HM3 Collection",
+	"timestamp": "2023-06-25T16:58:32.911Z",
+	"collection_id": "28139313-ca804510-923c-4aad-814a-8e9731882c62",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "error",
+	"startedAt": "2023-06-25T16:58:31.202Z",
+	"totalFail": 13,
+	"results": [],
+	"count": 1,
+	"totalTime": 0,
+	"collection": {
+		"requests": [
+			{
+				"id": "85cf6801-99c1-4a41-8a82-58e57750a71d",
+				"method": "GET"
+			},
+			{
+				"id": "77ef5e42-d32f-4e17-961b-3f560976033d",
+				"method": "GET"
+			},
+			{
+				"id": "c07e053a-28ff-4290-b611-e9b927ec0f00",
+				"method": "POST"
+			},
+			{
+				"id": "d67693c4-171e-4087-a608-89f2bde6d979",
+				"method": "PATCH"
+			},
+			{
+				"id": "4ceb6a84-181d-46f9-8b7c-4e0eec1c4476",
+				"method": "DELETE"
+			},
+			{
+				"id": "bd69dae3-4cb0-48a6-9b57-ad905f4c1fa7",
+				"method": "GET"
+			},
+			{
+				"id": "96549815-a146-4a6c-b9fb-0648c9e29b02",
+				"method": "GET"
+			},
+			{
+				"id": "48849ae8-77fb-44a8-8f05-5c160b9a5d64",
+				"method": "POST"
+			},
+			{
+				"id": "ec72a8b2-e063-4ac6-866c-892469c55d41",
+				"method": "PATCH"
+			},
+			{
+				"id": "17ef443e-d193-4c25-8c7e-772fd14b691c",
+				"method": "DELETE"
+			},
+			{
+				"id": "7fe6484a-7a54-4737-bcf3-d6970ae82994",
+				"method": "POST"
+			},
+			{
+				"id": "358edf45-ae75-489e-862f-b4100f8dbf92",
+				"method": "GET"
+			},
+			{
+				"id": "462440d7-928c-46fe-82d0-1dd03f59ca4d",
+				"method": "DELETE"
+			}
+		]
+	}
+}
