@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card, Row, Container } from 'react-bootstrap'
 import { useGetUserQuery } from '../services/api'
 import { type iPost } from '../models'
-import { Post } from './Post'
+import { UserPost } from './UserPost'
 import { useNavigate } from 'react-router'
 
 export const User: React.FC = () => {
@@ -19,21 +19,16 @@ export const User: React.FC = () => {
   }
 
   return (
-    <Container>
-      <Row>
+    <Container className="p-3">
+      <Row className="row gy-5">
       <Card>
       <Card.Header as="h5">Пользователь № {userId}</Card.Header>
       <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
+        <Card.Title>Посты пользователя № {userId}</Card.Title>
         <Button variant="primary" onClick={navigateToMain}>Назад</Button>
       </Card.Body>
     </Card>
-      </Row>
-      <Row>
-      {posts?.slice(0, 8).map((post: iPost) => <Post post={post} key={post.id} />)}
+      {posts?.map((post: iPost) => <UserPost post={post} key={post.id} />)}
       </Row>
     </Container>
   )

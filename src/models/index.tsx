@@ -12,3 +12,15 @@ export interface iComments {
   email: string
   body: string
 }
+
+export interface iErrorDataType {
+  error: string
+  errorObject: object
+  in: string
+  info: string
+}
+
+export interface iCustomerError {
+  data: iErrorDataType
+  status: number
+}

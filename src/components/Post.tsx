@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Card, Button, Col, Modal } from 'react-bootstrap'
+import { Card, Button, Col, Modal, Spinner } from 'react-bootstrap'
 import { type iPost, type iComments } from '../models'
 import { useLazyGetCommentsQuery } from '../services/api'
 
@@ -9,7 +9,7 @@ interface iProps {
 }
 
 export const Post: React.FC<iProps> = ({ post }) => {
-  const [fetchComment, { data: comments }] = useLazyGetCommentsQuery()
+  const [fetchComment, { data: comments, isLoading }] = useLazyGetCommentsQuery()
   const [show, setShow] = useState(false)
   const [postTitle, setPostTitle] = useState('')
   const handleClose = (): void => { setShow(false) }
@@ -33,7 +33,7 @@ export const Post: React.FC<iProps> = ({ post }) => {
         <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src="https://pdacdn.com/photo/y_c5da993a.jpg"
                   onClick={() => { navigateToUser(post.userId) }}/>
-        <Card.Body>
+        <Card.Body style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
           <Card.Title>{post.title}</Card.Title>
           <Card.Text>
             {post.body}
@@ -45,7 +45,11 @@ export const Post: React.FC<iProps> = ({ post }) => {
     </Col>
 
 <Modal show = { show } onHide = { handleClose }>
-<Modal.Dialog>
+  {isLoading
+    ? <Modal.Body>
+        <div className="d-flex justify-content-center"><Spinner animation="border" variant="primary" /></div>
+      </Modal.Body>
+    : <Modal.Dialog>
   <Modal.Header closeButton>
     <Modal.Title>Комментарии {postTitle}</Modal.Title>
   </Modal.Header>
@@ -59,7 +63,7 @@ export const Post: React.FC<iProps> = ({ post }) => {
   <Modal.Footer>
     <Button variant="secondary">Close</Button>
   </Modal.Footer>
-</Modal.Dialog>
+</Modal.Dialog>}
 </Modal>
 </>
   )
